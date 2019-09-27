@@ -1,0 +1,3 @@
+# ×Ô¶¯×°Åä
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.adwyxx.springboot.autoconfig.MyAutoConfigure
