@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>autoconfigure</artifactId>
+    <artifactId>auto-configure</artifactId>
 
-    <name>autoconfigure</name>
+    <name>auto-configure</name>
     <url>https://github.com/adwyxx/SpringBoot</url>
 
     <dependencies>

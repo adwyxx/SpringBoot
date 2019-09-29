@@ -1,14 +1,9 @@
 package com.adwyxx.springboot.bootstrap;
 
 import com.adwyxx.springboot.Profile.ProfileAnnotation;
-import com.adwyxx.springboot.Profile.ProfileComponent;
-import com.adwyxx.springboot.Profile.ProfileConfigure;
-import com.adwyxx.springboot.Respository.MyFirstRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
