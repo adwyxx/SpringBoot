@@ -1,16 +1,9 @@
-package com.adwyxx.springboot;
-
-import org.springframework.boot.Banner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.Bean;
-
-import java.util.HashSet;
-import java.util.Set;
-
+## SpringApplication
+### 一、SpringApplicaction 基本应用
+- 基本应用
+- 使用SpringApplication API
+- 使用SpringApplicationBuilder API : SpringApplicationBuilder
+```java
 /**
  * SpringBootApplication
  */
@@ -57,3 +50,7 @@ public class App
         }
     }
 }
+```
+
+### 二、SpringApplication 准备阶段
+#### 1. 配置Spring Boot Bean 源

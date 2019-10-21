@@ -6,19 +6,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
  * Web api 减库存操作，分布式锁运用实例
- * @author: Leo.Wang, adwyxx@qq.com
+ * @aur: Leo.Wang, adwyxx@qq.com
  * @date: 2019-09-29 14:31
  */
-@Controller
+@RestController
 @RequestMapping("/redislock")
 public class RedisLockController {
     private static final Logger logger = LoggerFactory.getLogger(RedisLockController.class);
