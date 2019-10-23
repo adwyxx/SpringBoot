@@ -4,7 +4,7 @@ package com.adwyxx.springboot;
  * Hello world!
  *
  */
-public class App 
+public class AutoConfigApp
 {
     public static void main( String[] args )
     {

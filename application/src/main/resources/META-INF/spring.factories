@@ -1,0 +1,16 @@
+# PropertySource Loaders 配置文件加载器
+#org.springframework.boot.env.PropertySourceLoader=\
+
+# Run Listeners 运行时监听器
+#org.springframework.boot.SpringApplicationRunListener=\
+
+# Error Reporters 异常报告
+#org.springframework.boot.SpringBootExceptionReporter=\
+
+# Application Context Initializers 应用上下文初始化器
+org.springframework.context.ApplicationContextInitializer=\
+com.adwyxx.springboot.context.AfterMyApplicationContextInitializer,\
+com.adwyxx.springboot.context.MyApplicationContextInitializer
+
+# Application Listeners 应用监听器
+#org.springframework.context.ApplicationListener=\

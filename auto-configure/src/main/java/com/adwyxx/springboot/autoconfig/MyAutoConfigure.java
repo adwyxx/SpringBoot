@@ -8,6 +8,8 @@ import com.adwyxx.springboot.condition.WindowsOSCondition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 
 /**
  * 自定义自动装配类，可以有多重方式装配Bean
@@ -17,6 +19,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration //定义该类为配置装配类
 @EnableMyConfig //加入@Enable装配
 @EnableImportSelector(model= SelectorBeanModel.SECOND )  //加入Import装配
+@Order(Ordered.HIGHEST_PRECEDENCE+10)
 public class MyAutoConfigure {
     //加入条件装配
     @Bean
