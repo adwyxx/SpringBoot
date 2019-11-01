@@ -1,5 +1,11 @@
 package com.adwyxx.springaop;
 
+import sun.misc.ProxyGenerator;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -36,6 +42,11 @@ public class JDKDynamicProxy implements InvocationHandler {
     }
 
     public static void main(String[] args) {
+        //testProxy();
+        generateProxy();
+    }
+
+    public static void testProxy(){
         //1.初始化被代理类的实例
         IUserService service = new UserService();
         //2.初始化动态代理 切面 实例
@@ -51,5 +62,38 @@ public class JDKDynamicProxy implements InvocationHandler {
                 aop);
         //动态代理实例条用被代理类的方法
         proxy.addUser();
+    }
+
+
+    /**
+     * 生成代理类Class
+     * @author: Leo.Wang, adwyxx@qq.com
+     */
+    public static void generateProxy(){
+      byte[] bytes = ProxyGenerator.generateProxyClass("com.adwyxx.springaop.UserProxy",new Class<?>[]{IUserService.class},17);
+      saveFile("UserProxy.class",bytes);
+    }
+
+    public static void saveFile(String filename,byte [] data){
+        if(data != null){
+            String filepath ="D:\\" + filename;
+            File file  = new File(filepath);
+            if(file.exists()){
+                file.delete();
+            }
+            FileOutputStream fos = null;
+            try {
+                fos = new FileOutputStream(file);
+                fos.write(data,0,data.length);
+                fos.flush();
+                fos.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }finally {
+            }
+
+        }
     }
 }
