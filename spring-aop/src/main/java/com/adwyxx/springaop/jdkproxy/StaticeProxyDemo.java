@@ -1,4 +1,4 @@
-package com.adwyxx.springaop;
+package com.adwyxx.springaop.jdkproxy;
 
 /**
  * 静态代理 示例

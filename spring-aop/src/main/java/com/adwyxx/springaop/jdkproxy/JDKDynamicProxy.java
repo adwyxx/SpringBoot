@@ -1,4 +1,4 @@
-package com.adwyxx.springaop;
+package com.adwyxx.springaop.jdkproxy;
 
 import sun.misc.ProxyGenerator;
 

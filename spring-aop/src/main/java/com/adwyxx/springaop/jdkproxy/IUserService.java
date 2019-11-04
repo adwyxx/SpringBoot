@@ -1,4 +1,4 @@
-package com.adwyxx.springaop;
+package com.adwyxx.springaop.jdkproxy;
 
 /**
  * 模拟业务逻辑接口
