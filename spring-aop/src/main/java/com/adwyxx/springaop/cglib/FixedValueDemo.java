@@ -4,7 +4,7 @@ import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.FixedValue;
 
 /**
- * CGLib {@Enhance} {@FixedValue}: 拦截待返回值得方法：
+ * CGLib {@Enhance} {@FixedValue}: 拦截待返回值得方法,锁定返回值，使得返回值始终是FixedValue#loadObject方法中返回的固定值
  * 1. 重写FixedValue#getObject()方法，被拦截的方法返回值类型必须和getObject的返回值类型相同
  * 2. 被拦截的方法不能是fianl的
  * @author: Leo.Wang,adwyxx@qq.com
